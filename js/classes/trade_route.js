@@ -30,11 +30,14 @@ var TradeRoute = new Class({
 	
 	// map initialization
 	load_default_map: function() {
+		
 		var layer = new OpenLayers.Layer.OSM(this.DEFAULT_LAYER_NAME, this.DEFAULT_LAYER_SOURCE);
 		var map_id = this.jqueryObject.attr('id');
-		this._ol_map = new OpenLayers.Map(map_id);
+		
+		this._ol_map = new OpenLayers.Map(map_id, {controls: []});
+		this._ol_map.removeControl(new OpenLayers.Control.PanZoomBar());
 		this._ol_map.addLayer(layer);
-		this._ol_map.zoomToMaxExtent();
+		this._ol_map.zoomTo(2);
 	}
 	
 	// loading data
