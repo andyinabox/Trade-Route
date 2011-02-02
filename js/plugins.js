@@ -1,17 +1,7 @@
 
 // remap jQuery to $
 (function($){
-
- 
-
-
-
-
-
- 
-
-
-
+	var map = new TradeRoute('#map');
 })(this.jQuery);
 
 

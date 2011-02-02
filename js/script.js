@@ -1,5 +1,5 @@
 /* Author: Andy Dayton */
-var map;
+/*var map;
 // function init(){
     map = new OpenLayers.Map('map');
 
@@ -12,5 +12,5 @@ var map;
 		            );
 		map.addLayer(osmarender);
 		map.setCenter(new OpenLayers.LonLat(0, 0), 6);
-		map.zoomToMaxExtent();
+		map.zoomToMaxExtent(); */
 // }
