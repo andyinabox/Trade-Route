@@ -2,6 +2,15 @@
 // remap jQuery to $
 (function($){
 	var map = new TradeRoute('#map');
+	$('body').keypress(function(event){
+		// console.log(event);
+		if(event.charCode == '107') {
+			map.next();
+		}
+		if(event.charCode == '106') {
+			map.previous();
+		}
+	});
 })(this.jQuery);
 
 

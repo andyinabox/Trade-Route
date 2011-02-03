@@ -30,7 +30,6 @@ var TradeRoute = new Class({
 	
 	// map initialization
 	load_default_map: function() {
-		
 		var layer = new OpenLayers.Layer.OSM(this.DEFAULT_LAYER_NAME, this.DEFAULT_LAYER_SOURCE);
 		var map_id = this.jqueryObject.attr('id');
 		
@@ -38,10 +37,18 @@ var TradeRoute = new Class({
 		this._ol_map.removeControl(new OpenLayers.Control.PanZoomBar());
 		this._ol_map.addLayer(layer);
 		this._ol_map.zoomTo(2);
-	}
+	},
 	
 	// loading data
 	
-	//
+	
+	// item navigation
+	next: function() {
+		console.log("Next");
+	},
+	
+	previous: function() {
+		console.log("Previous");
+	}
 	
 });
