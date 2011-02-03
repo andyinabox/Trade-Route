@@ -15,17 +15,22 @@ var TradeRoute = new Class({
 	
 	// options
 	options: {
-		map_layer: false,
-		
+		scroll_selector: '#main',
+		map_layer: false
 	},
 	
 	// ignition key
 	initialize: function(selector, options){
 	    this.setOptions(options);
 	    this.jqueryObject = jQuery(selector);
+			this.scroller = jQuery(options.scroll_selector);
+			console.log(options.scroll_selector);
 			if(!this.map_layer) {
 				this.load_default_map();
 			}
+			
+			this.scroller.serialScroll({ items:'.milestone' });
+			this.scroller.trigger('start');
 	},
 	
 	// map initialization
@@ -44,10 +49,13 @@ var TradeRoute = new Class({
 	
 	// item navigation
 	next: function() {
+		this.scroller.trigger('next');
+		console.log(this.scroller);
 		console.log("Next");
 	},
 	
 	previous: function() {
+		this.scroller.trigger('prev');
 		console.log("Previous");
 	}
 	

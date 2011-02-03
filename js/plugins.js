@@ -1,7 +1,7 @@
 
 // remap jQuery to $
 (function($){
-	var map = new TradeRoute('#map');
+	var map = new TradeRoute('#map', {scroll_selector:'#main'});
 	$('body').keypress(function(event){
 		// console.log(event);
 		if(event.charCode == '107') {
